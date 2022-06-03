@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function (){
         copyToClipboard();
     });
 
-
     function generateNif() {
        
         let first_digit = getRandomNumberBetweenTwoNumbers(1,3);
