@@ -6,17 +6,10 @@
         "default_popup": "index.html",
         "default_icon": "/Images/bandeira16.png"
     },
-    "permissions": [
-        "contextMenus"
-      ],
       "icons": {
         "16": "/Images/bandeira16.png",
         "48": "/Images/bandeira48.png",
         "128": "/Images/bandeira128.png"
-      },
-      "background": {
-          "scripts": ["eventPage.js"],
-          "persistent": false
       },
     "manifest_version": 2
 }

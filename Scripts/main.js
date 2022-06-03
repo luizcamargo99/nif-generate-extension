@@ -5,6 +5,10 @@ document.addEventListener("DOMContentLoaded", function (){
         generateNif();
     });
 
+    document.querySelector('#btn_copy').addEventListener('click', function () {
+        copyToClipboard();
+    });
+
 
     function generateNif() {
        
@@ -25,8 +29,28 @@ document.addEventListener("DOMContentLoaded", function (){
         for (let index = 0; index < array_nif.length; index++) {
             final_nif += array_nif[index].toString();            
         }
+        let input = document.querySelector('#nif_field');
+        input.value = final_nif;  
+        copyToClipboard();        
+    }
 
-        document.querySelector('#nif_field').value = final_nif;        
+    function showCopiedText() {
+        let text_copied = document.querySelector('#copied');
+        text_copied.style.display = 'flex';
+        setTimeout(hideCopiedText, 2000);
+    }
+
+    function hideCopiedText() {
+        let text_copied = document.querySelector('#copied');
+        text_copied.style.display = 'none'
+    }
+
+    function copyToClipboard () {
+        let input = document.querySelector('#nif_field');
+        input.focus();
+        input.select();
+        document.execCommand("copy"); 
+        showCopiedText();
     }
 
     function getRandomNumberBetweenTwoNumbers (min, max) {
@@ -46,9 +70,4 @@ document.addEventListener("DOMContentLoaded", function (){
             return 11 - rest_division;
         }
     }
-
-
-
-
-
 });

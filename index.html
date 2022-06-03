@@ -6,7 +6,13 @@
     <title>Easy NIF</title>
 </head>
 <body>
-    <input type="text" disabled maxlength="9" id="nif_field">
-    <button id="btn_generate">Generate</button>
+    <div class="column">
+        <div class="row">
+            <input type="text" readonly maxlength="9" id="nif_field">
+            <button id="btn_generate">Generate</button>
+            <button id="btn_copy">Copy</button>           
+        </div>
+        <span id="copied">NIF copied!</span>
+    </div>
 </body>
 </html>
