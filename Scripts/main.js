@@ -57,10 +57,10 @@ document.addEventListener("DOMContentLoaded", function (){
     }
 
     function calculateLastDigit(array_nif) {        
-        let calculate_some = array_nif[7] * 2 + array_nif[6] * 3 + array_nif[5] * 4 + array_nif[4] * 5 
+        let calculate_sum = array_nif[7] * 2 + array_nif[6] * 3 + array_nif[5] * 4 + array_nif[4] * 5 
         + array_nif[3] * 6 + array_nif[2] * 7 + array_nif[1] * 8 + array_nif[0] * 9;
 
-        let rest_division = calculate_some % 11;
+        let rest_division = calculate_sum % 11;
 
         if (rest_division <= 1) {
             return 0;
