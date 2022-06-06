@@ -64,9 +64,7 @@ document.addEventListener("DOMContentLoaded", function (){
 
         if (rest_division <= 1) {
             return 0;
-        }
-        else {
-            return 11 - rest_division;
-        }
+        }        
+        return 11 - rest_division;
     }
 });
